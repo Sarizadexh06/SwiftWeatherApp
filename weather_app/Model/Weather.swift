@@ -1,8 +1,14 @@
-//
-//  Weather.swift
-//  weather_app
-//
-//  Created by TEST on 13.02.2025.
-//
-
 import Foundation
+
+struct WeatherResponse: Codable {
+    let main: Main
+    let weather: [Weather]
+}
+
+struct Main: Codable {
+    let temp: Double
+}
+
+struct Weather: Codable {
+    let description: String
+}
